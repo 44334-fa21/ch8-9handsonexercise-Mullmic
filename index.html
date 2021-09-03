@@ -1,13 +1,120 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-	<head> 
-		<title>LASTNAME Chapter8-9HandsOnExercise</title> 
-		<meta charset="utf-8"> 
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Mullins Chapter8-9HandsOnExercise</title>
+		<meta charset="utf-8">
 		<style>
-		
+		table {margin: auto;
+					border: 5px solid #000;
+					border-spacing: 0;
+				}
+				td, th {padding: 0.5em;
+						border: .5px solid #000;
+					}
+					caption {font-size: 1.2em;}
+					body{  background-color: #B2E0D2;}
+					#wrapper {
+						display: flex;
+										flex-direction: row;}
+					#stupers{flex: 2;}
+					#stuRating{flex: 3;}
+					#stuInfoCol1{flex: 2;}
+					#stuInfoCol2{flex: 3;}
+					input[type="radio"], input[type="checkbox"]{display: inline;}
+@media only screen and (max-width: 768px) {
+  #wrapper {grid-template-columns: auto;
+            grid-template-rows: 200px auto auto auto 100px;}
+    header {grid-row: 1/2; grid-column: 1/2;}
+    nav {grid-row: 4/5; grid-column: 1/2;}
+    main {grid-row: 2/3; grid-column: 1/2;}
+    aside {grid-row: 3/4; grid-column: 1/2;}
+    footer {grid-row: 5/6; grid-column: 1/2;}}
 		</style>
-	</head> 
-<body> 
+	</head>
+<body>
+	<table>
+			 <thread>
+			 </thread>
+			 <tbody>
+				<tr>
+				<td> Movie Title </td>
+				<td>Edge of Tomorrow</td>
+			</tr>
+			<tr>
+			 <td>Director</td>
+			 <td>Doug Liman</td>
+		 </tr>
+		 <tr>
+ 		 <td>Leading Actor</td>
+ 		 <td>Tom Cruise</td>
+ 	 </tr>
+	 <tr>
+		<td>Leading Actress</td>
+		<td>Emily Blunt</td>
+	</tr>
+	<tr>
+	 <td>Rating</td>
+	 <td>PG-13</td>
+ </tr>
+ <tr>
+	<td>Description</td>
+	<td>A time traveling war movie about a man trying to stop an alien race from winning</td>
+</tr>	<tr>
+	 <td>Review</td>
+	 <td><a href="https://www.newyorker.com/culture/richard-brody/a-spoiler-filled-review-of-edge-of-tomorrow">New Yorkers Review of Edge of Tomorrow </a></td>
+ </tr>
 
-</body> 
-</html> 
+			 </tbody>
+		 </table>
+		 <h1>Music Survey</h1>
+		 <p>Required fields marked with an asterisk *</p>
+		 <form method="post" action="http://webdevbasics.net/scripts/demo.php">
+			 <div id="wrapper">
+				 <fieldset id="stupers"><legend>Information</legend>
+					 <label for="myName">*Name:</label>
+					 <input type="text" name="myName" id="myName" required="required"
+					 placeholder="your first and last name">
+					 <br>
+					 <label for="myEmail">*Email:</label>
+					 <input type="text" name="myEmail" id="myEmail" required="required"
+					 placeholder="you@yourdomain.com">
+					 <br>
+					 <label for="myEmail">*Textbox:</label>
+					 	<textarea
+						rows="3" cols="60"> </textarea>
+				 </fieldset>
+
+				 <fieldset id="stuInfoCol1"><legend>Music Information</legend>
+					 Select Genre:<br>
+					 <input type="radio" name"myStatus" id="GS" value="Graduate Student">
+					 Pop<br>
+					 <input type="radio" name"myStatus" id="S" value="Senior">
+					 Rock <br>
+					 <input type="radio" name"myStatus" id="J" value="Junior">
+					 Jazz <br>
+
+					 More Music: <br>
+					 <input type="checkbox" name="myOrg" id="acm" value="ACM">
+					 Pop<br>
+					 <input type="checkbox" name="myOrg" id="adink" value="adink">
+	 				Rock<br>
+					<input type="checkbox" name="myOrg" id="s" value="Sorority">
+					Jazz<br>
+
+
+				 </fieldset>
+
+	<fieldset id="stuRating"><legend>Student Ratings/Comments</legend>
+	<labe for="myComments">*Comments:</label>
+<select size="3" name="campus" id="campus">
+	<option value="Yes">one</option>
+<option value="No">two</option>
+<option value="Yes">three</option>
+<option value="No">four</option>
+		<input id="mySubmit" type="submit" value="Submit">
+				<input id="mySubmit" type="reset" value="Reset">
+	</fieldset>
+			 </div>
+</body>
+<footer> Michael Mullins s533392@nwmissouri.edu </footer>
+</html>
